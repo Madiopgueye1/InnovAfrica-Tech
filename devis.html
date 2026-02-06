@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="InnovAfrica Tech - Demande de devis">
+    <title>Demander un devis - InnovAfrica Tech</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header>
+  <nav class="navbar">
+    <div class="inner container">
+      <a class="logo" href="index.html">
+        <img src="assets/images/logo.png" alt="Logo InnovAfrica Tech">
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="actions">
+        <a href="devis.html" class="btn">Demander un devis</a>
+      </div>
+
+      <div class="burger">☰</div>
+    </div>
+  </nav>
+</header>
+<main>
+<section class="form-section">
+  <div class="container">
+    <h2>Demander un devis</h2>
+    <form method="POST" action="#" id="devisForm" data-endpoint="devis">
+      <div class="form-row">
+        <label for="service">Service</label>
+        <select id="service" name="service" required>
+          <option value="">Choisissez un service</option>
+          <option>Web</option>
+          <option>IoT</option>
+          <option>Cybersécurité</option>
+          <option>Académique</option>
+          <option>Formation</option>
+        </select>
+
+        <label for="budget">Budget estimé (FCFA)</label>
+        <input id="budget" type="number" name="budget" required>
+
+        <label for="delai">Délai souhaité</label>
+        <input id="delai" type="text" name="delai" required>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="btn">Envoyer</button>
+      </div>
+      </form>
+      <div id="devisMessage" class="form-message" aria-live="polite"></div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="container">
+    <div class="col">
+      <h4>InnovAfrica Tech</h4>
+      <p>Solutions numériques innovantes pour l’Afrique — Web, IoT et Cybersécurité.</p>
+    </div>
+    <div class="col">
+      <h4>Nos services</h4>
+      <p><a href="services.html">Développement Web</a></p>
+      <p><a href="services.html">IoT</a></p>
+      <p><a href="services.html">Cybersécurité</a></p>
+    </div>
+    <div class="col">
+      <h4>Contact</h4>
+      <p>Email: <a href="mailto:madiopgueye739@gmail.com">madiopgueye739@gmail.com</a></p>
+      <p>WhatsApp: <a href="https://wa.me/221782326898" target="_blank" rel="noopener noreferrer">+221 78 232 6898</a></p>
+    </div>
+    <div class="col">
+      <h4>Réseaux</h4>
+      <div class="socials">
+        <a href="#" aria-label="Twitter">T</a>
+        <a href="#" aria-label="LinkedIn">in</a>
+        <a href="#" aria-label="GitHub">GH</a>
+      </div>
+    </div>
+  </div>
+  <div class="container bottom">
+    <div class="legal">&copy; 2026 InnovAfrica Tech — Tous droits réservés</div>
+    <div class="legal">Conçu et développé par InnovAfrica Tech</div>
+  </div>
+</footer>
+<script src="assets/js/script.js"></script>
+<script src="assets/js/form-handler.js"></script>
+<script src="assets/js/ui.js"></script>
+</body>
+</html>
