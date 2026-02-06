@@ -37,4 +37,34 @@ document.addEventListener('DOMContentLoaded', () => {
       it.classList.add('pre-animate');
     });
   });
-});
+
+  // Newsletter form subscription
+  const newsletterForm = document.querySelector('.newsletter-form');
+  if (newsletterForm) {
+    newsletterForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const emailInput = newsletterForm.querySelector('input[type="email"]');
+      const button = newsletterForm.querySelector('button');
+      const email = emailInput.value.trim();
+      
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        alert('Veuillez entrer une adresse email valide.');
+        return;
+      }
+
+      // Simulate subscription (in production, this would send to a server)
+      const originalText = button.textContent;
+      button.textContent = 'Abonnement confirmé ✓';
+      button.style.opacity = '0.8';
+      button.disabled = true;
+      emailInput.value = '';
+      
+      setTimeout(() => {
+        button.textContent = originalText;
+        button.style.opacity = '1';
+        button.disabled = false;
+      }, 3000);
+      
+      alert('Merci pour votre abonnement ! Un email de confirmation a été envoyé.');
+    });
+  }
