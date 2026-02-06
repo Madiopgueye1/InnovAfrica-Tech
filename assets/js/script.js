@@ -3,7 +3,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const burger = document.querySelector('.burger');
   const navLinks = document.querySelector('.nav-links');
   if (burger && navLinks) {
-    burger.addEventListener('click', () => navLinks.classList.toggle('show'));
+    // Toggle menu visibility and swap icon to a cross when open
+    burger.setAttribute('role','button');
+    burger.setAttribute('aria-expanded','false');
+    burger.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('show');
+      burger.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      burger.textContent = open ? '✕' : '☰';
+    });
   }
 
   // Simple field validation visual helper
